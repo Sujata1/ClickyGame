@@ -1,0 +1,23 @@
+{
+  "name": "clickygame",
+  "version": "1.0.0",
+  "description": "CLicky Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sujata1/ClickyGame.git"
+  },
+  "author": "Sujata",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sujata1/ClickyGame/issues"
+  },
+  "homepage": "https://github.com/Sujata1/ClickyGame#readme",
+  "dependencies": {
+    "create-react-app": "^2.0.4",
+    "yarn": "^1.10.1"
+  }
+}
