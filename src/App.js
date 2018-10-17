@@ -21,14 +21,12 @@ class App extends React.Component {
 
 
   ifClicked = id => {
-    console.log("id: " + id)
     if (this.state.clicked.includes(id)) {
       this.setState({ count: 0, clicked: [], message: "You Guessed Incorrectly" });
     }
     else {
       this.state.clicked.push(id);
       this.setState({ clickyList: this.shuffle(this.state.clickyList), count: this.state.count + 1, message: "You Guessed Correctly" });
-      console.log("count: " + this.state.count);
       if ((this.state.count + 1) > this.state.topScore) {
 
         this.setState({ topScore: this.state.count + 1 });
@@ -76,6 +74,7 @@ class App extends React.Component {
               <ClickyCard
                 ifClicked={this.ifClicked}
                 name={clicky.name}
+                key={clicky.id}
                 id={clicky.id}
                 image={clicky.image}
               />
