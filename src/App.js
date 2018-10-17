@@ -26,7 +26,7 @@ class App extends React.Component {
     }
     else {
       this.state.clicked.push(id);
-      this.setState({ clickyList: this.shuffle(this.state.clickyList), count: this.state.count + 1, message: "You Guessed Correctly" });
+      this.setState({ clickyList: this.reShuffle(this.state.clickyList), count: this.state.count + 1, message: "You Guessed Correctly" });
       if ((this.state.count + 1) > this.state.topScore) {
 
         this.setState({ topScore: this.state.count + 1 });
@@ -34,10 +34,9 @@ class App extends React.Component {
     }
   };
 
-  shuffle = array => {
+  reShuffle = array => {
     var currentIndex = array.length, temporaryValue, randomIndex;
 
-    // While there remain elements to shuffle...
     while (0 !== currentIndex) {
 
       // Pick a remaining element...
